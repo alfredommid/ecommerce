@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+
+$font1: 'Antic Slab', serif;
+$font2: 'Montserrat', sans-serif;
+
+#root{
+    background-color: #fffbf2;
+}
+
+.contenedor{
+    background-color: #FFBE35;
+    width: 30%;
+    margin: auto;
+    border-radius: 20px;
+
+    .title{
+        font: 100% $font1;
+        font-size: 1.5em;
+        color: #8F18AC;
+    }
+
+    .cuestionario{
+        font: 100% $font2;
+
+        .inputs, #email, #password{
+            background-color:transparent;
+            border-radius: 0px;
+            border-style: none;
+            border-bottom: 2px solid #FFA022;
+            color: #470158;
+        }
+        .inputs::placeholder{
+            font-size: .8em;
+        }
+        .inputs:focus, #email:focus, #password:focus{
+            border-color: #FFA022;
+            box-shadow: none;
+            color: #8F18AC;
+        }
+    }
+
+    .btn_sub{
+        background-color: transparent;
+        border-style: none;
+        .next{
+            width: 60px;
+            color: #8F18AC;
+        }
+        .next:hover{
+            color: #420052;
+        }
+    }
+    .btn_sub:hover{
+        background: transparent;
+    }
+    .btn_sub:focus{
+        background: transparent;
+        border-color: inherit;
+        box-shadow: none;
+    } 
+    .error-msg{
+        background-color: #F60A20;
+        color: whitesmoke;
+        border-radius: 10px;
+        width: 70%;
+        margin: 0 auto;
+    }
+}

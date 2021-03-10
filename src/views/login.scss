@@ -1,0 +1,44 @@
+
+.right{
+    height: 30em;
+    background: linear-gradient(to right,#23aa8f,#fafa6e);
+    border-radius: 0 20px 20px 0;
+}
+.left{
+    color: #fafa6e;
+    height: 30em;
+    background: linear-gradient(to right, #2a4858, #23aa8f);
+    border-radius: 20px 0 0 20px;
+
+    .btn-submit{
+        background-color: transparent;
+        border-color: #ff80b0;
+        color: #ff80b0;
+    }
+    .btn-submit:hover{
+        background-color: #ff80b0;
+        color:#fafa6e; 
+    }
+    .error-msg{
+        background-color: #ee4250;
+        color: whitesmoke;
+        border-radius: 10px;
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+#email, #password{
+    background-color: transparent;
+    border-radius: 0px;
+    border-style: none;
+    border-bottom: 1.5px solid #fafa6e;
+    color: #ff80b0;
+}
+#password:focus, #email:focus{
+    border-color: #ff80b0;
+    box-shadow: none;
+}
+#password::placeholder, #email::placeholder{
+    color: #69975e;
+    font-size: .8em;
+}

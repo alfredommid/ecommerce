@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+
+$font1: 'Antic Slab', serif;
+$font2: 'Montserrat', sans-serif;
+
+html{
+  background-color: #fffbf2;
+    
+    .main{
+      background-color:wheat;
+      font: 100% $font2;
+      color: wheat;
+    }
+
+  
+}

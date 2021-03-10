@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+$font1: 'Antic Slab', serif;
+$font2: 'Montserrat', sans-serif;
+
+#buscar:focus{
+    box-shadow: none;
+    border-color: inherit;
+    color: #6C0485;
+    text-align: center;
+}
+.navbard{
+    background-color: #fffbf2;
+
+    .navboot{
+
+        .nav-text{
+            font: 100% $font2;
+            font-size: .8em;
+            text-decoration: none;
+            color: #6C0485;
+        }
+    }
+}
+
+
+
+.lupa{
+    width: 2em;
+    height: 2em;
+    margin-left: 5px;
+}
+#buscar{
+    background: #FFBE35;
+}
+.panther_logo{
+    width: 80px;
+}
+
+.nav-text:hover{
+    text-decoration: none;
+    color: #FFBE35;
+}
+.search-nav{
+    width: 30%;
+}
