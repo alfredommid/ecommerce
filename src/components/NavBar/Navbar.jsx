@@ -14,7 +14,7 @@ const NavBar = () => {
         const {data} = await axios.get(url_shows);
     }*/
     return ( 
-        <div className="d-flex justify-content-between my-3 mx-2  align-items-center navbard">
+        <div className="d-flex justify-content-between py-3 px-2  align-items-center navbard">
             <Link to="/"><img src={panther} className="panther_logo" alt="logo"/></Link>
 
             <FormGroup className="d-flex search-nav align-items-center">
@@ -24,7 +24,7 @@ const NavBar = () => {
                     id="buscar" 
                     className="searchbox" 
                     placeholder="Buscar" 
-                    style={{background:'#fffbf2', borderStyle:"none", borderBottom:"solid 1.8px #8F18AC", borderRadius:"0px"}} />
+                    style={{background:'#FDC54F', borderStyle:"none", borderBottom:"solid 1.8px #8F18AC", borderRadius:"0px"}} />
                 <span className="lupa" style={{color:"#8F18AC"}}>
                     <svg 
                     className="w-6 h-6" 
@@ -46,6 +46,9 @@ const NavBar = () => {
                         </NavItem>
                         <NavItem  className="mb-1">
                             <Link to="logout" className="nav-text">Log Out</Link>
+                        </NavItem>
+                        <NavItem>
+                            <Link to="cart" className="cart">Cart</Link>
                         </NavItem>
                     </Nav> 
                 :

@@ -9,19 +9,31 @@ import {
 } from 'reactstrap';
 import PropTypes from 'prop-types';
 import '../components/showProducts.scss'
+import Payload from '../utils/payload'
 
 const ShowProducts = (props) => {
+  const user= Payload();
+
   const {id, name, price, brand, image} = props;
     return ( 
-      <Col className="container">
+      <Col className="container cont-col">
         <Link to={`shop/${id}`}>
-          <Card className="mb-3 mt-3" style={{width: "200px", background:"#E0322F"}}>
-            <span className="d-flex justify-content-center" style={{color:"#240C26"}}>{brand}</span>
-            <CardImg className='p-2' top width="100%" src={image} alt="Show Image" />
-            <CardBody>
-              <CardTitle className="text-center" style={{color:"#240C26"}} tag="h5">{name}</CardTitle>
-              <span className="price">${price} USD</span>
-            </CardBody>
+          <Card className="carta mb-3 mt-3" style={{width: "200px"}}>
+              <span className="mt-2 text-center container blink" id="marca">{brand}</span>
+              <CardImg className='p-2' top width="100%" src={image} alt="Show Image" />
+              <CardBody>
+                <CardTitle className="text-center blink" id="title" tag="h5">{name}</CardTitle>
+                <span className="blink" id="price">${price} USD</span>
+              </CardBody>
+              <section className="d-flex justify-content-center mb-3">
+                {user
+                    ? <input type='button'>Add to cart</input>
+                    : <Link to="/login">
+                        <div className="logear">Log in to Buy</div>
+                      </Link>
+                }
+              </section>
+              
           </Card>
         </Link>
       </Col>

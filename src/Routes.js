@@ -27,7 +27,7 @@ const Routes = () => {
 
     return ( 
         <Router>
-            <NavBar/>
+            <NavBar fixed="top"/>
             <Switch>
                 <Route exact path="/">
                     <LandPage products={products}/>
@@ -40,11 +40,14 @@ const Routes = () => {
                 </Route>
                 {/* <Route exact path="/profile" component={Profile}/> */}
                 <Route exact path="/profile">
-                    <Shop/>
+                    <Shop products={products} />
                 </Route>
                 <Route exact path="/shop/:idProduct">
                     <SelectedProduct/>
                 </Route>
+                {/* <Route>
+                    <Cart/>
+                </Route> */}
             </Switch>
         </Router>
      );

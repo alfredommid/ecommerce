@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import Routes from './Routes';
-import 'bootstrap/scss/bootstrap.scss'
+import 'bootstrap/scss/bootstrap.scss';
+import {CartProvider} from './Cart.js';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routes />
+    <CartProvider>
+      <Routes />
+    </CartProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

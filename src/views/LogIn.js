@@ -33,7 +33,7 @@ const LogIn = () => {
     })
 
     return (
-            <Row div className="mx-4">
+            <Row div className="mx-4 mt-5">
                 <Col md={5} className="left">
                     <div className="my-5">
                         <h2 className="text-center">Inicia Sesión</h2>

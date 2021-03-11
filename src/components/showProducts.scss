@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+
+$font1: 'Antic Slab', serif;
+$font2: 'Montserrat', sans-serif;
+
 .shop-container{
     margin: auto;
+
+    .cont-col{
+        display: flex;
+        justify-content: center;
+        color: #BF2669;
+
+        .carta{
+            border-color: #BF2669;
+            border-width: 2px;
+            border-bottom-width: 5px;
+            box-shadow: 0px 3px 6px 0px rgb(0,0,0);
+
+            #marca{
+                font: 100% $font2;
+                font-size: .8em;
+            }
+
+            .logear{
+                width: 100%;
+                background-color: red;
+            }
+    
+        }
+
+        .carta:hover{
+            border-color: #FFBE35;
+        }
+    }
 }
+.blink{
+    color: #3a0c20;
+}
+
+.blink:visited,.blink:hover,.blink:active {
+    text-decoration:none;
+  }

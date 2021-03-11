@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import ShowProducts from '../components/ShowProducts';
 import no_image from '../assets/no_image.jpg'
 import Banner from '../components/Banner'
-
+import './landpage.scss';
+import Payload from '../utils/payload'
 
 const LandPage = ({products}) => {
+    const user = Payload();
     
     const cardData = () => {
         return products.map(prodObj => {
@@ -27,8 +29,11 @@ const LandPage = ({products}) => {
 
     return ( 
         <>
-            <Banner/>
-            <Row xs="3" className="container shop-container">
+            {user
+                ? ''
+                : <Banner/>
+            }
+            <Row xs="6" className="shop-container p-3">
                     {cardData()}
             </Row>
         </>       
