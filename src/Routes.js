@@ -7,10 +7,10 @@ import SignUp from './views/SignUp';
 import LogIn from './views/LogIn';
 import LandPage from './views/LandPage';
 import NavBar from './components/NavBar/Navbar'
-//import Profile from './views/Profile';
-import Shop from './views/Shop'
+import Profile from './views/Profile';
 import SelectedProduct from './views/SelectedProduct'
 import axios from 'axios';
+import CartView from './views/CartView'
 
 const Routes = () => {
     const [products, setProducts] = useState([]);
@@ -38,16 +38,15 @@ const Routes = () => {
                 <Route exact path="/login">
                     <LogIn/>
                 </Route>
-                {/* <Route exact path="/profile" component={Profile}/> */}
                 <Route exact path="/profile">
-                    <Shop products={products} />
+                    <Profile/>
                 </Route>
                 <Route exact path="/shop/:idProduct">
                     <SelectedProduct/>
                 </Route>
-                {/* <Route>
-                    <Cart/>
-                </Route> */}
+                <Route exact path="/cart">
+                    <CartView products={products}/>
+                </Route>
             </Switch>
         </Router>
      );

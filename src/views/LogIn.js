@@ -16,10 +16,10 @@ const LogIn = () => {
                 console.log(data,status);
                 const {token} = data;
                 window.localStorage.setItem('token', token);
-                history.push('/shop');
+                history.push('/');
             })
             .catch(error => {
-                console.error(error.response.data);
+                console.error(error);
                 setError(true);
                 setTimeout(() => {
                     setError(false)
@@ -43,18 +43,18 @@ const LogIn = () => {
                             <Col md={6}>
                                 <FormGroup>
                                     <Label>Correo</Label>
-                                    <Input type="email" name="email" value={input.email} onChange={handleInput} id="email" placeholder="with a placeholder" className="inputs"/>
+                                    <Input type="email" name="email" value={input.email} onChange={handleInput} id="email" className="inputs"/>
                                 </FormGroup>
                             </Col>
                             <Col md={6}>
                                 <FormGroup>
                                     <Label>Contraseña</Label>
-                                    <Input type="password" name="password" value={input.password} onChange={handleInput} id="password" placeholder="password placeholder" className="inputs"/>
+                                    <Input type="password" value={input.password} onChange={handleInput} id="password"className="inputs"/>
                                 </FormGroup>
                             </Col>
                         </Row>
                         <div className="d-flex justify-content-center">
-                            <Button className="btn-submit mt-3">Sign in</Button>
+                            <Button type="submit" className="btn-submit mt-3">Sign in</Button>
                         </div>
                         {error 
                             ? <p className="error-msg py-3 mt-3 text-center">El correo o la contraseña no coinciden.</p> 
